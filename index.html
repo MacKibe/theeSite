@@ -1,32 +1,127 @@
 <!DOCTYPE html>
 <html>
-    <head>
-        <title> Welcome </title>
-        <meta content="width=device-width, initial-scale=1" name="viewport" />
-        <link href="css/styles.css" rel="stylesheet" type="text/css" />
-        <script src="scripts/index.js" defer></script>
-    </head>
-    <body>
-        <header>
-            <!-- where i'll have my logo -->
-            <p>Kibe</p>
-            <nav>
-                <li><a href="#">Home</a></li>
-                <li><a href="#">About Me</a></li>
-                <li><a href="#">Portfolio</a></li>
-                <li><a href="#">Contact</a></li>
-            </nav>
-        </header>
+  <head>
+    <meta charset="utf-8">
+    <title>Personal Portfolio</title>
+    <style>
+        
+        * {
+            margin: 0;
+            padding: 0;
+        }
 
-        <main>
-            <!-- Where i'll have my details and also an image in the top left corner -->
-            <img src="" alt="">
-            <div class="my-details">
-                
-            </div>
-        </main>
-        <footer>
-            .
-        </footer>
-    </body>
+        body {
+            font-family: Arial, sans-serif;
+        }
+
+        header {
+            background-color: #333;
+            color: #fff;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 20px;
+        }
+
+        header h1 {
+            margin: 0;
+        }
+
+        header nav {
+            display: flex;
+        }
+
+        header nav a {
+            color: #fff;
+            text-decoration: none;
+            padding: 0 10px;
+        }
+
+        header nav a:hover {
+            color: #ccc;
+        }
+
+        main {
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+
+        section {
+            margin-bottom: 40px;
+        }
+
+        section h2 {
+            margin-top: 0;
+        }
+
+        .about img {
+            width: 20%;
+            border-radius: 45% 30% 0 55%;
+        }
+
+        .about-details {
+            display: flex;
+            gap: 5%;
+            align-items: baseline;
+        }
+
+        article P {
+            font-size: 120%;
+        }
+         
+        footer {
+            position: absolute;
+            bottom: 0;
+            width: 100%;
+            background-color: #333;
+            color: #ccc;
+            text-align: center;
+        }
+
+        .contact a {
+            background-color: rgb(199, 199, 199);
+            padding: .3rem 1rem;
+        }
+        
+        .contact p {
+            margin: .8% 0;
+        }
+    </style>
+  </head>
+  <body>
+    <header>
+      <h1>JK.</h1>
+      <nav>
+        <a href="#about">About</a>
+        <a href="#work">Work</a>
+        <a href="#contact">Contact</a>
+      </nav>
+    </header>
+
+    <main>
+      <section class="about" id="about">
+        <h2>Web developer/Photographer/Graphic Designer</h2>
+        <img src="./images/me.jpeg" alt="James Kiberenge">
+      </section>
+
+      <section class="work" id="work">
+        <h3>My Work</h3>
+      </section>
+
+      <section class="contact" id="contact">
+          <h3>Contact Me</h3>
+          <p>Email: <a href="mailto:ndichujames2030@gmail.com">ndichujames2030@gmail.com</a></p>
+          <p>Phone: +254701069382</p>
+          <p>Nairobi, Kenya</p>
+          <section>
+            <!-- lnks to various socials -->
+          </section>
+      </section>
+    </main>
+
+    <footer>
+        <p> &copy; Copyright 2021</p>
+    </footer>
+  </body>
 </html>
