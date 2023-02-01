@@ -3,73 +3,159 @@
   <head>
     <meta charset="utf-8">
     <title>Ndichu James Kiberenge</title>
-    <style>
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.14.0/css/all.css" integrity="sha384-HzLeBuhoNPvSl5KYnjx0BT+WB0QEEqLprO+NBkkk5gbc67FTaL7XIGa2w1L0Xbgc" crossorigin="anonymous">
 
-        img {
-            width: 10%;
-            border-radius: 50%;
-            height: 20vh;
-        }
-        
-        body {
-            background-color: #FFCC80;
-        }
-
-        header {
-            position: absolute;
-            top: 10%;
-            left: 40%;
-        }
-
-        main {
-            display: grid;
-            grid-template-columns: 1fr 1fr 1fr;
-            width: 100%;
-            position: absolute;
-            top: 30%;
-        }
-        .image-container {
-            background-image: url("./images/m3.jpeg");
-            height: 40vh;
-            width: 25%;
-            background-position: center;
-            background
-        }
-        
-        footer {
-            position: absolute;
-            top: 80%;
-            left: 40%;
-        }
-    </style>
+    <link rel="stylesheet" href="./css/styles.css">
   </head>
   <body>
+
     <header>
-        <p>welcome, I'm</p>
-        <p>Ndichu James Kiberenge</p>
+        <div class="logo">
+            <h1>JN<b>,</b></h1>
+        </div>
+        
+        <nav>
+            <ul>
+                <li><a href="./projects.html">projects</a></li>
+                <li><a href="">about me</a></li>
+            </ul>
+        </nav>
     </header>
-    <main>
-        <div class="side-panel">
-            <p>Designer, Photographer</p>
+
+    <div class="main-page page">
+        <img src="./images/m3.jpeg" alt="">
+        <div class="my-details">
+            <h2>hello there<b>,</b></h2>
+            <p>I'm <b>Ndichu James Kiberenge</b></p>
+            <p class="bio">I’m a Web Designer & Developer, Photographer <br>based in Nairobi, Kenya.</p>
         </div>
-        <svg width="400" height="300">
-            <clipPath id="clip">
-              <circle cx="50" cy="50" r="40" />
-            </clipPath>
-            <image xlink:href="./images/m3.jpeg" width="400" height="300" clip-path="url(#clip)" />
-          </svg>
-          
-        <div class="side-panel">
-            <p>Full Stack Dev.</p>
+        <section class="cv-dock">
+            <div class="cv">
+                <button id="download-cv">Check my CV</button>
+            </div>
+            <div class="hire-me">
+                <button>Contact Me</button>
+            </div>
+        </section>
+    </div>
+
+    <div class="about-me page">
+        <h2>About me.</h2>
+        <div class="bio-details">
+            <p>
+                Front-End Developer with a passion for creating visually stunning websites and a unique perspective as a skilled photographer. <br>Constantly striving to improve skills and deliver user-centered designs through new challenges.
+            </p>
         </div>
-    </main>
-    <footer>
-        I'm a Web Designer and Developer, Photographer<br> based in Nairobi, Kenya.
-    </footer>
+        <div class="socials">
+            <p>Lets Connect:</p>
+            <a href="https://github.com/MacKibe">
+                <img src="./icons/github.svg" alt="github">
+            </a>
+            <a href="https://www.linkedin.com/in/james-kiberenge-3a7504140/">
+                <img src="./icons/linkedin.svg" alt="linkedin">
+            </a>
+            <a href="https://www.instagram.com/ndichu_jim/?hl=en">
+                <img src="./icons/instagram.svg" alt="instagram">
+            </a>
+            <a href=""><img src="./icons/google.svg" alt="google"></a>
+        </div>          
+    </div>
+
+    <div class="projects">
+        <h2>Plans for the Year</h2>
+        <p>My plans for the first quarter of the year, is to have atleast one fully working website, this will aid improving my front end skills by making responsive website using Javascript, practice working with databases and familiarize myself with back-end languages</p>
+        <ol>
+            <li>
+                <details>
+                    <summary>Journal</summary>
+                    <p>
+                        <h4>Use</h4>
+                        <ol>
+                            <li>Track your daily emotions & activities,
+                                where you can also reflect on them
+                            </li>
+                            <li>Keep track of your milestones</li>
+                            <li>Set goals and track how the journey is going</li>
+                            <li>Plan your day/week/month</li>
+                        </ol>
+                    </p>
+
+                    <p>
+                        <h4>Core items for the website</h4>
+                        <ol>
+                            <li>User Registration & Login:</li>
+                            <li>Journal Entry:</li>
+                            <li>Prompts & Questions:</li>
+                            <li>Privacy & Security:</li>
+                            <li>Backup & Export:</li>
+                            <li>Notifications:</li>
+                            <li>User Profile:</li>
+                        </ol>
+                    </p>
+                </details>
+            </li>
+            <li>
+                <details>
+                    <summary>FitnessTracker</summary>
+                        <p>
+                            <h4>Use</h4>
+                            <ol>
+                                <li>Track your session sets and reps.</li>
+                                <li>Have a progree chart to see your progress</li>
+                                <li>track you body weight, height,  and various body parts</li>
+                            </ol>
+                        </p>
+                        </summary>
+                    </details>
+                </details>
+            </li>
+                <details class="tools-section">
+                    <summary>Dev tools</summary>
+                    <details>
+                        <summary>Front-End</summary>
+                        <ol>
+                            <li>HTML</li>
+                            <li>CSS</li>
+                            <li>Javascript</li>
+                        </ol>
+                    </details>
+                    <details>
+                        <summary>Back-End</summary>
+                        <ol>
+                            <li>Javascript/Typescript</li>
+                            <li>PHP</li>
+                        </ol>
+                    </details>
+                    <details>
+                        <summary>Database Side</summary>
+                        <ol>
+                            <li>MySql</li>
+                        </ol>
+                    </details>
+                </details>
+
+            </li>
+        </ol>
+    </div>
+    
+    <div class="projects-done">
+        <h2>Projects</h2>
+        <div class="kiama-kia-ma">
+            <img src="./images/kiama.jpg" alt="">
+            <div class="image-test-area">
+                <a href="http://206.189.207.206/kibe/" target="_blank">Kiama Kia Ma</a>
+            </div>
+            <div class="mashamba">
+                <img src="./images/mashamba.jpg" alt="">
+                <div class="image-test-area">
+                    <a href="http://206.189.207.206/mashamba/" target="_blank">Mashamba</a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- <footer>
+        .
+    </footer> -->
+    
   </body>
 </html>
