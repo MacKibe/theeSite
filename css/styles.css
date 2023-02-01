@@ -3,48 +3,21 @@
     padding: 0;
     box-sizing: border-box;
 }
-
 body {
-    background-color: #B3E5FC;
     font-size: 150%;
 }
 
 header {
-    background-color: #e8a02d;
-    color: #000;
-    padding: 2% 5%;
-    top: 0;
     display: flex;
-    gap: 65%;
+    justify-content: space-around;
 }
 
-nav {
+.port-title {
     display: flex;
-    width: 100%;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
 }
-
-li {
-    list-style: none;
-    margin: 0 5%;
-    font-size: 90%;
-}
-
-.body {
-    background-color: aliceblue;
-    color: brown;
-    font-size: 200%;
-    padding: 19% 30%;
-}
-
-.myInfo {
-    background-color:blueviolet;
-    color: brown;
-}
-
-.footer {
-    background-color:aqua;
-    color: brown;
-    bottom: 0;
-    width: 100%;
-    padding: .5% 0;
+img {
+    width: 10%;
 }

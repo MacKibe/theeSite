@@ -1,75 +1,63 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <meta charset="utf-8">
-    <title>Ndichu James Kiberenge</title>
-    <style>
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
-
-        img {
-            width: 10%;
-            border-radius: 50%;
-            height: 20vh;
-        }
-        
-        body {
-            background-color: #FFCC80;
-        }
-
-        header {
-            position: absolute;
-            top: 10%;
-            left: 40%;
-        }
-
-        main {
-            display: grid;
-            grid-template-columns: 1fr 1fr 1fr;
-            width: 100%;
-            position: absolute;
-            top: 30%;
-        }
-        .image-container {
-            background-image: url("./images/m3.jpeg");
-            height: 40vh;
-            width: 25%;
-            background-position: center;
-            background
-        }
-        
-        footer {
-            position: absolute;
-            top: 80%;
-            left: 40%;
-        }
-    </style>
-  </head>
-  <body>
-    <header>
-        <p>welcome, I'm</p>
-        <p>Ndichu James Kiberenge</p>
-    </header>
-    <main>
-        <div class="side-panel">
-            <p>Designer, Photographer</p>
-        </div>
-        <svg width="400" height="300">
-            <clipPath id="clip">
-              <circle cx="50" cy="50" r="40" />
-            </clipPath>
-            <image xlink:href="./images/m3.jpeg" width="400" height="300" clip-path="url(#clip)" />
-          </svg>
-          
-        <div class="side-panel">
-            <p>Full Stack Dev.</p>
-        </div>
-    </main>
-    <footer>
-        I'm a Web Designer and Developer, Photographer<br> based in Nairobi, Kenya.
-    </footer>
-  </body>
+    <head>
+        <title>my portfolio</title>
+        <link rel="stylesheet" href="./css/styles.css">
+    </head>
+    <body>
+        <header>
+            <img src="./images/m3.jpeg" alt="kangara">
+            <div class="port-title">
+                <h1> Ndichu James Kiberenge</h1>
+                <h3>My 2023 Goals</h3>
+            </div>
+            <div class="port-socials">
+                <p>I am a software developer</p>
+                p
+                <a href="https://github.com/kangarageorge0">github</a>
+                <a href="https://drive.google.com/file/d/1MvsIwbYgaEVK5v4mKKidFoS2N6muRP7Y/view?usp=share_link">My Cv</a>
+            </div>
+        </header>
+        <main>
+            <table class="b" id="table" style="width: 100%;">
+                <thead>
+                    <th>No.</th>
+                    <th>Application</th>
+                    <th>Purpose</th>
+                    <th >Language</th>
+                </thead>
+                <tr>
+                    <td>1.</td>
+                    <th>School System</th>
+                    <td>
+            
+                        -creating visually appealing and user-friendly websites to help build my profile<br>
+                        -Build dynamic and responsive web pages using typescript <br>
+                        -Create reports by generating queries from the various tables <br>
+                        -Migration of data from one database to another incase of database updates<br>
+                        -Read, edit and export spreadsheets to the system directly using sheetjs
+                    </td>
+                    <td rowspan="2">
+                        i. Typscript <br>
+                        ii. PHP <br>
+                        iii. MySQL <br>
+                        iv. HTML $ CSS <br>
+                        V.  Github
+                    </td>
+                </tr>
+                <tr>
+                    <td>2.</td>
+                    <th>Bookshop Management System</th>
+                    <td>
+            
+                        -creating the database from scratch and learning how to connect tables and assigning the keys<br>
+                        -Build dynamic and interactive web pages using typescript <br>
+                        -Use Structured Query Language to generate various reports of the system<br>
+                        -Visit some few bookshops and demonstrate to them the benefit of the system and how to manage their stock. 
+                    </td>
+                </tr>
+            </table>
+        </main>
+        <footer class="c">@2023</footer>
+    </body>
 </html>
