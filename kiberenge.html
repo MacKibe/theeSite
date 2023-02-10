@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Portfolio</title>
+    <link rel="stylesheet" href="style.css" />
+    <!-- 
+    Use icons. -->
+    <script
+      src="https://kit.fontawesome.com/4fd11e560e.js"
+      crossorigin="anonymous"
+    ></script>
+
+    <style>
+
+      * {
+        font-size: large;
+      }
+      
+      .container {
+        display: flex;
+        padding-top: 2%;
+      }
+
+      .plan {
+        width: 73%;
+        margin-top: 12%;
+      }
+
+      .dev {
+        width: 25%;
+        text-align: center;
+        margin-top: 5%;
+        font-weight: 500;
+        font-size: 1.5rem;
+      }
+
+      table {
+        border-collapse: collapse;
+        width: 100%;
+      }
+
+      td,
+      th {
+        border: 5px solid #000;
+        text-align: left;
+        padding: 8px;
+      }
+
+      tr:nth-child(even) {
+        /* background: #fee7e7; */
+      }
+
+      th {
+        text-align: center;
+        background: #fff;
+      }
+
+      .img_container {
+        margin-top: 10%;
+      }
+
+      img {
+        width: 90%;
+        border-radius: 8%;
+      }
+
+      figcaption {
+        margin-top: 5%;
+        font-size: larger;
+      }
+
+      .title {
+        font-size: 2rem;
+        font-weight: 700;
+        text-align: center;
+        margin-bottom: 1%;
+      }
+
+      .greetings {
+        font-weight: 800;
+        font-size: 1.5rem;
+      }
+
+      a {
+        text-decoration: none;
+        margin-left: 5%;
+      }
+
+      i {
+        font-size: 1.5rem;
+      }
+
+      /* For viewing in smalll mobile screens */
+      @media (max-width: 768px){
+      .container {
+        display: flex;
+        flex-direction: row;
+      }
+    }
+    </style>
+  </head>
+  <body onload="typeWriter()">
+    <div id="container" class="container">
+      <div id="dev" class="dev">
+        <!--
+            Type setting greetings. -->
+        <p id="greetings" class="greetings"></p>
+        I AM NDICHU JAMES KIBERENGE.
+        <figure>
+          <img src="https://lh3.googleusercontent.com/pw/AMWts8CyI5Nz8iqJYeK5oLBujhR23dm-FV4RtO-TUoxHoVMoT9_J0kpIi5StZsomLL4yeFi68a-fFvjjJashydaAYi4JnUAWYdE6qPGyefQ4yGkoa5_hCqi6B8CY_lO6xb0cg4qo-OEBqy0gU1Rtq74r-lrySQ=w708-h960-s-no?authuser=0" alt="Ndichu James Kiberenge image" />
+          <figcaption>
+            My Stack: <br/>
+            <a href="https://github.com/DanielKaniu/">
+              <i class="fa-brands fa-github"></i>Github
+            </a>
+          </figcaption>
+        </figure>
+      </div>
+      
+      <div id="plan" class="plan">
+        <div id="title" class="title">2023 ROADMAP</div>
+        <table>
+          <thead>
+            <th>Application</th>
+            <th>Problem</th>
+            <th>Plan</th>
+            <th>Outcome</th>
+          </thead>
+          <tbody>
+            <tr>
+              <td>Journal</td>
+              <td>
+                <ul>
+                  <li>Unable to manage your daily activities and tasks</li>
+                  <li>Unable to track your goals and set new ones</li>
+                  <li>Unable to see milestones achieved</li>
+                  <li>Unable to see your daily emotions</li>
+              </ul>
+              </td>
+              <td>
+                The plan is to help in managing your activities and goals, see which goals/tasks are completed and which others arent.
+              </td>
+              <td>
+                With this application it will me productive in knowing which tasks i have to complete and how i will complete them and when they should be completed.
+              </td>
+            </tr>
+            <tr>
+              <td>Fitness Tracker</td>
+              <td>
+                Problem at hand is I dont have an app for tracking my fitness journey, with i hope the app will help in checking my body weight and height progress, my body muscle progresss, my BMI progress, my set and reps progress, my dieting progress.
+              </td>
+              <td>
+                The plan is to build them a simple site to help in keep a track of my fitness journey.
+              </td>
+              <td>
+                Hopefully it will aid in setting more goals in gym, helping out in my daily diet, keep a track progress for my body.
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+
+    <script>
+
+      function display_greetings() {
+        var today = new Date();
+        var hourNow = today.getHours();
+        var greeting;
+
+        if (hourNow > 15) {
+          greeting = "Good Evening";
+        } else if (hourNow > 12) {
+          greeting = "Good Afternoon";
+        } else if (hourNow > 0) {
+          greeting = "Good Morning";
+        } else {
+          greeting = "Welcome";
+        }
+
+        return greeting;
+      }
+
+      var i = 0;
+      var txt = display_greetings();
+      var speed = 250;
+
+      function typeWriter() {
+        if (i < txt.length) {
+          document.getElementById("greetings").innerHTML += txt.charAt(i);
+          i++;
+          setTimeout(typeWriter, speed);
+        }
+      }
+    </script>
+
+  </body>
+</html>
