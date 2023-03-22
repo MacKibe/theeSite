@@ -1,21 +1,25 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <title>Portfolio</title>
-    <link rel="stylesheet" href="style.css" />
-    <!-- 
-    Use icons. -->
-    <script
-      src="https://kit.fontawesome.com/4fd11e560e.js"
-      crossorigin="anonymous"
-    ></script>
-
+    <title>myPortfolio</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/gh/devicons/devicon@v2.15.1/devicon.min.css"
+    />
     <style>
+      @import url("https://fonts.googleapis.com/css2?family=Nunito&family=Quicksand&display=swap");
 
       * {
         font-size: large;
+        padding: 0;
+        margin: 0;
       }
-      
+
+      body {
+        background-color: #ede7f6;
+      }
+
       .container {
         display: flex;
         padding-top: 2%;
@@ -23,7 +27,7 @@
 
       .plan {
         width: 73%;
-        margin-top: 5%;
+        margin-top: 2%;
       }
 
       .dev {
@@ -34,20 +38,29 @@
         font-size: 1.5rem;
       }
 
+      .mobile {
+        display: none;
+      }
+
       table {
         border-collapse: collapse;
         width: 100%;
       }
 
-      td,
       th {
-        border: 5px solid #000;
+        text-align: center;
+        border: 2px solid #000;
+        padding: 8px;
+      }
+
+      td {
+        border: 2px solid #000;
         text-align: left;
         padding: 8px;
       }
 
       tr:nth-child(even) {
-        background: #FFEBEE;
+        background: #f1f8e9;
       }
 
       th {
@@ -61,7 +74,7 @@
 
       img {
         width: 90%;
-        border-radius: 8%;
+        border-radius: 50%;
       }
 
       figcaption {
@@ -70,7 +83,7 @@
       }
 
       .title {
-        font-size: 2rem;
+        font-size: 20px;
         font-weight: 700;
         text-align: center;
         margin-bottom: 1%;
@@ -83,123 +96,318 @@
 
       a {
         text-decoration: none;
-        margin-left: 5%;
+        margin-left: 1%;
       }
 
       i {
         font-size: 1.5rem;
       }
 
-      /* For viewing in smalll mobile screens */
-      @media (max-width: 768px){
-      .container {
-        display: flex;
-        flex-direction: row;
+      .detail {
+        position: relative;
       }
-    }
+
+      /* Hover effect */
+      .details {
+        visibility: hidden;
+        width: 400px;
+        background-color: #c8e6c9;
+        border-radius: 5px;
+        position: absolute;
+        z-index: 1;
+        padding: 10px;
+        font-family: "Nunito", sans-serif;
+        bottom: 20%;
+        transition: 0.1s;
+      }
+
+      .detail .details::after {
+        content: "";
+        position: absolute;
+      }
+
+      .detail:hover .details {
+        visibility: visible;
+        opacity: 1;
+        font-size: 16px;
+      }
+
+      a {
+        text-decoration: dashed;
+        border-bottom: 1px dashed;
+        color: #616161;
+      }
+
+      /* For viewing in small mobile screens */
+      @media (max-width: 768px) {
+        html {
+          height: 100%;
+          width: 100%;
+        }
+
+        html {
+          margin: 0;
+          padding: 0;
+        }
+
+        body {
+          margin: 0;
+          height: 100%;
+          width: 100%;
+          font-family: "Quicksand", sans-serif;
+        }
+
+        .container {
+          display: flex;
+          flex-direction: column;
+          background-color: #fafafa;
+        }
+
+        .dev {
+          margin-top: 0;
+          display: grid;
+          grid-template-columns: 18% 42% 30%;
+          grid-template-rows: 100%;
+          grid-template-areas: "dev name figure";
+          height: 20%;
+          width: 100%;
+        }
+
+        .greetings {
+          grid-area: dev;
+          margin-left: 10px;
+          font-size: 10px;
+        }
+
+        figure {
+          grid-area: figure;
+          top: 5px;
+          display: flex;
+          flex-direction: column;
+        }
+
+        .name {
+          grid-area: name;
+          text-align: center;
+          font-size: 17px;
+          font-weight: bold;
+        }
+
+        .plan {
+          display: none;
+        }
+
+        .mobile {
+          display: flex;
+          flex-direction: column;
+          width: 100%;
+        }
+
+        img {
+          margin-top: -20px;
+          height: 80px;
+          width: 80px;
+          border-radius: 50%;
+        }
+
+        figcaption {
+          margin-top: 5%;
+          font-size: small;
+          text-align: center;
+        }
+
+        .application {
+          background: #f1f8e9;
+          border: 1px solid #dddada;
+          border-radius: 5px;
+          padding: 10px;
+        }
+
+        .indent {
+          background-color: #c8e6c9;
+          padding: 5px;
+          text-indent: 15px;
+          border: 1px solid #dddada;
+          border-radius: 8px;
+        }
+
+        .indent > summary {
+          font-size: 16px;
+        }
+
+        .indent > p {
+          margin-left: 25px;
+          font-size: 14px;
+        }
+
+        summary {
+          font-size: 20px;
+          font-weight: bold;
+        }
+      }
     </style>
   </head>
-  <body onload="typeWriter()">
+
+  <body onload="typeWriter();">
     <div id="container" class="container">
       <div id="dev" class="dev">
         <!--
             Type setting greetings. -->
         <p id="greetings" class="greetings"></p>
-        I AM NDICHU JAMES KIBERENGE.
+
+        <p class="name">I am <br />Ndichu James Kiberenge</p>
+
         <figure>
-          <img src="https://lh3.googleusercontent.com/pw/AMWts8DDa-kvRXgz6dcfTbqmwxiWotqv1rb-j1nZsCdh_IZL571LsQah2sshlFYgODZwq5PQJp1_f9vXcjcn1Qh0231XlF65MDudaY8jwbqidte50_DcGo8GYCBlRbaEDat4pYW9hFZpbmEiacmFIQNaJiFwdQ=w976-h960-no?authuser=0" alt="Ndichu James Kiberenge image" />
+          <img
+            src="https://lh3.googleusercontent.com/pw/AMWts8DDa-kvRXgz6dcfTbqmwxiWotqv1rb-j1nZsCdh_IZL571LsQah2sshlFYgODZwq5PQJp1_f9vXcjcn1Qh0231XlF65MDudaY8jwbqidte50_DcGo8GYCBlRbaEDat4pYW9hFZpbmEiacmFIQNaJiFwdQ=w976-h960-no?authuser=0"
+            alt="Ndichu James Kiberenge image"
+          />
           <figcaption>
-            My Stack: <br/>
-            <a href="https://github.com/DanielKaniu/">
-              <i class="fa-brands fa-github"></i>Github
+            <a href="https://github.com/Mackibe/">
+              <i class="devicon-github-original-wordmark"></i>
             </a>
           </figcaption>
         </figure>
       </div>
-      
+      <div class="mobile">
+        <div id="title" class="title">2023 Objectives</div>
+      </div>
       <div id="plan" class="plan">
-        <div id="title" class="title">2023 ROADMAP</div>
-        <table>
+        <div id="title" class="title">2023 Objectives</div>
+        <table id="web">
           <thead>
-            <th>Application</th>
-            <th>Problem</th>
-            <th>Plan</th>
-            <th>Outcome</th>
+            <tr>
+              <th>No.</th>
+              <th>Application</th>
+              <th>Problem</th>
+              <th>Objective</th>
+              <th>Outcome</th>
+            </tr>
           </thead>
-          <tbody>
-            <tr>
-              <td>
-                <a target="_blank" href="http://127.0.0.1:5500/mutall/kiama_kia_Ma/index.html">Kiama Kia Ma</a>
-              </td>
-              <td>
-                The kiama kia Ma group doesn't have a website for managing their content.
-              </td>
-              <td>
-                Develop a website to hold their content, show various sub groups with their officials and members.
-              </td>
-              <td>
-                Hoping at the end of the year will have a working website showing all officials and the website will also replace circumcision posters. 
-              </td>
-            </tr>
-            <tr>
-              <td><a target="_blank" href="http://localhost/mashamba/">Mashamba</a></td>
-              <td>
-                My client doesnt have a website to display his properties, buildings.
-              </td>
-              <td>
-                Have a website to show the lands' location, value and other details.
-              </td>
-              <td>
-                Have a website where his clients can view properties with ease and also contact the seller.
-              </td>
-            </tr>
-            <tr>
-              <td><a target="_blank" href="http://">Journal</a></td>
-              <td>
-                <ul>
-                  <li>Unable to manage your daily activities and tasks</li>
-                  <li>Unable to track your goals and set new ones</li>
-                  <li>Unable to see milestones achieved</li>
-                  <li>Unable to see your daily emotions</li>
-              </ul>
-              </td>
-              <td>
-                The plan is to help in managing your activities and goals, see which goals/tasks are completed and which others arent.
-              </td>
-              <td>
-                With this application it will me productive in knowing which tasks i have to complete and how i will complete them and when they should be completed.
-              </td>
-            </tr>
-            <tr>
-              <td><a target="_blank" href="http://127.0.0.1:5500/fitPal/index.html#">Fitness Tracker</a></td>
-              <td>
-                Problem at hand is I dont have an app for tracking my fitness journey, with i hope the app will help in checking my body weight and height progress, my body muscle progresss, my BMI progress, my set and reps progress, my dieting progress.
-              </td>
-              <td>
-                The plan is to build them a simple site to help in keep a track of my fitness journey.
-              </td>
-              <td>
-                Hopefully it will aid in setting more goals in gym, helping out in my daily diet, keep a track progress for my body.
-              </td>
-            </tr>
-            <tr>
-              <td><a target="_blank" href="">Software Installation Documentation</a></td>
-              <td>
-                Currently Mutall Data group doesnt have a documentation on how to install various softwares.
-              </td>
-              <td>
-                To create one to aid installing the softwares.
-              </td>
-              <td>
-                It will help interns and other mutall data users install the softwares with ease.
-              </td>
-            </tr>
-          </tbody>
+          <tbody></tbody>
         </table>
       </div>
     </div>
 
     <script>
+      //
+      //Get the element to add the web content
+      const web = document.querySelector("#web>tbody");
+      //
+      //Get the element to add content visible via the mobile website
+      const mobile = document.querySelector(".mobile");
+      //
+      //
+      //The portfolio data as an array
+      const portfolio = [
+        {
+          id: 1,
+          link: "http://localhost/Breko/",
+          application: "Kiama Kia Ma",
+          problem:
+            "The Kiama Kia Ma group has alot of data currently on their whatsApp groups and other platforms but its not easy to manage all of it.",
+          objective:
+            "To develop a website to hold their content, show various sub groups with their officials and members.",
+          outcome:
+            "Hoping at the end of the year will have a working website showing all officials and the website will also replace circumcision posters.",
+        },
+        {
+          id: 2,
+          link: "http://localhost/Breko/",
+          application: "Mashamba",
+          problem:
+            "My client doesnt have a website to display his properties, buildings.",
+          objective:
+            "Have a website to show the lands' location, value and other details.",
+          outcome:
+            "Have a website where his clients can view properties with ease and also contact the seller.",
+        },
+        {
+          id: 3,
+          link: "http://localhost/Breko/",
+          application: "Fitness Tracker",
+          problem:
+            "Problem at hand is I dont have an app for tracking my fitness journey, with i hope the app will help in checking my body weight and height progress, my body muscle progresss, my BMI progress, my set and reps progress, my dieting progress.",
+          objective:
+            "The plan is to build them a simple site to help in keep a track of my fitness journey",
+          outcome:
+            "Hopefully it will aid in setting more goals in gym, helping out in my daily diet, keep a track progress for my body.",
+        },
+        {
+          id: 4,
+          link: "http://localhost/Breko/",
+          application: "Interns Getting Started Documentation",
+          problem:
+            "Currently Mutall Data group doesnt have a documentation on how to install various softwares with their various configurations.",
+          objective:
+            "To create one to aid interns in installing the softwares on their systems easily.",
+          outcome:
+            "It will help interns and other mutall data users install the softwares with ease.",
+        },
+        {
+          id: 5,
+          link: "http://localhost/Breko/",
+          application: "Journal",
+          problem:
+            "Unable to manage your daily activities and tasks.Unable to track your goals and set new ones.Unable to see milestones achieved.Unable to see your daily emotions",
+          objective:
+            "The plan is to help in managing your activities and goals, see which goals/tasks are completed and which others arent.",
+          outcome:
+            "With this application it will me productive in knowing which tasks i have to complete and how i will complete them and when they should be completed.",
+        },
+      ];
+      //
+      //Create the elements to be viewed on the phone
+      for (app of portfolio) {
+        //
+        //Create a summary of each application module I aim to develop
+        mobile.innerHTML += `
+          <details class="application" open>
+        <summary>${app.application}</summary>
+        <details class="indent" closed>
+          <summary>Problem</summary>
+          <p>${app.problem}</p>
+        </details>
+        <details class="indent" closed>
+          <summary> Objective</summary>
+          <p>
+           ${app.objective}
+          </p>
+        </details>
+        <details class="indent" closed>
+          <summary> Outcome</summary>
+          <p>
+           ${app.outcome}
+          </p>
+        </details>
+      </details>
+          `;
+      }
+      //
+      //Iterate through all application descriptions to create the desired elements
+      for (app of portfolio) {
+        //
+        //Create row of the needed values.
+        web.innerHTML += `<tr>
+            <td>
+                ${app.id}
+            </td>
+            <td>
+                <a href="${app.link}">
+                ${app.application}</a>
+            </td>
+            <td class="detail">
+                ${app.problem}
+            </td>
+            <td class="detail">
+                ${app.objective}
+            </td>
+            <td class="detail">
+              ${app.outcome}
+            </td>
+          </tr>`;
+      }
+      //<a href=${app.demo}>Find the demo here</a>
 
       function display_greetings() {
         var today = new Date();
@@ -221,7 +429,7 @@
 
       var i = 0;
       var txt = display_greetings();
-      var speed = 250;
+      var speed = 100;
 
       function typeWriter() {
         if (i < txt.length) {
@@ -231,6 +439,5 @@
         }
       }
     </script>
-
   </body>
 </html>
